@@ -1,5 +1,0 @@
-/home/user/work/hello-jni/build/intermediates/classes/arm/debug
-/home/user/work/hello-jni/build/intermediates/pre-dexed/arm/debug/support-annotations-21.0.3-2469367918e02080e9941c2f87da1874236dc975.jar
-/home/user/work/hello-jni/build/intermediates/pre-dexed/arm/debug/internal_impl-21.0.3-a69ec4c1291818e2732a11b9040a5534bea63ca8.jar
-/home/user/work/hello-jni/build/intermediates/pre-dexed/arm/debug/classes-bb464bdff1d0ef8a3c1fcfeec6921104238b1374.jar
-/home/user/work/hello-jni/build/intermediates/pre-dexed/arm/debug/classes-2ced31dc9430da07c4cc587cec999d632333cc11.jar
