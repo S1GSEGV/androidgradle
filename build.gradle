@@ -53,10 +53,15 @@ android {
         }
     }
 
+task shellScript(type: Exec){
+    commandLine 'echo', 'Start Building Android Hello Jni';
+}
+
 task ndkBuild(type: Exec) {
    commandLine 'ndk-build'
 }
 
+ndkBuild.dependsOn shellScript
 tasks.withType(JavaCompile) {
     compileTask -> compileTask.dependsOn ndkBuild
 }
