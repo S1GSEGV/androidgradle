@@ -35,12 +35,10 @@ android {
             main{
                 manifest.srcFile 'AndroidManifest.xml'
                 java.srcDirs = ['src']
-                resources.srcDirs = ['src']
-                aidl.srcDirs = ['src']
-                renderscript.srcDirs = ['src']
                 res.srcDirs = ['res']
                 assets.srcDirs = ['assets']
-                jni.srcDirs = ['jni']
+                jni.srcDirs = []
+                jniLibs.srcDir 'libs'
             }
         }
         ndk {
@@ -54,6 +52,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+task ndkBuild(type: Exec) {
+   commandLine 'ndk-build'
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn ndkBuild
+}
 
     flavorDimensions "abi"
 
